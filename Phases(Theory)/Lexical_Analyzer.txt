@@ -3,3 +3,23 @@
 1.) It is also called as the "tokenizer" or "Scanner"
 2.) The task of a lexical analyzer is to take an input stream and translate the code into 
     a form more readeable by the compiler. 
+
+3.) Token and Lexeme:
+
+    Token -> It forms a class of lexems it tells what category of lexemes it is , is it a 
+    keyword or an identifier or an integer etc.
+
+    Lexeme -> It is a string of characters when given an inout stream diving them into 
+    individual characters.
+
+    if(t==0){
+        return 0;
+    }
+
+    Token                       Lexeme
+    Keyword                     if
+    Identifier                  t
+    Comparison operator         ==
+    Keyword                     return
+    Parantheses                 {
+    Parantheses                 }
