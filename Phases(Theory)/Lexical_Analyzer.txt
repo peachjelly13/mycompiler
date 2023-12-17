@@ -27,3 +27,10 @@
 4.) It translates lexemes into tokens both the token and lexeme need to be specified.
 5.) Lexical Ananlyzer recognizes the token that matches the longest lexeme >>, a shift token is recognized rather than two greater-than tokens. 
 6.) One thing affecting the structure of a compiler is the token set.
+7.) Either you can have tokens for every symbol or you an merge tokens
+8.) For example, the >, >=, >>, and >>=, can be treated either as four tokens, or as a single comparison-operator token
+ 
+    Having a token dor every symbol can make code generation easier but the parser can
+    become larger than necessary.
+    In general, arithmetic operators with the same precedence and associativity can be grouped together, type-declaration keywords (like 
+    int and char) can be combined, and so forth
