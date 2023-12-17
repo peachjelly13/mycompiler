@@ -23,3 +23,7 @@
     Keyword                     return
     Parantheses                 {
     Parantheses                 }
+
+4.) It translates lexemes into tokens both the token and lexeme need to be specified.
+5.) Lexical Ananlyzer recognizes the token that matches the longest lexeme >>, a shift token is recognized rather than two greater-than tokens. 
+6.) 
