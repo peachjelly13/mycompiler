@@ -1,0 +1,5 @@
+//WHAT A LEXICAL ANALYZER IS
+
+1.) It is also called as the "tokenizer" or "Scanner"
+2.) The task of a lexical analyzer is to take an input stream and translate the code into 
+    a form more readeable by the compiler. 
