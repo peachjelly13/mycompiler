@@ -34,3 +34,10 @@
     become larger than necessary.
     In general, arithmetic operators with the same precedence and associativity can be grouped together, type-declaration keywords (like 
     int and char) can be combined, and so forth
+
+9.) The lexical analyzer is typically a self-contained unit that interfaces with the rest of 
+    the compiler via a small number (typically one or two) of subroutines and global variables. The parser calls the lexical-analyzer every time it needs a new token, and the 
+    analyzer returns that token and the associated lexeme. Since the actual input mechanism 
+    is hidden from the parser, you can modify or replace the lexical analyzer without 
+    affecting the rest of the compiler.
+
