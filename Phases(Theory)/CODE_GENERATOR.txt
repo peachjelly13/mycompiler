@@ -1,0 +1,43 @@
+//WHAT A LEXICAL ANALYZER IS
+
+1.) It is also called as the "tokenizer" or "Scanner"
+2.) The task of a lexical analyzer is to take an input stream and translate the code into 
+    a form more readeable by the compiler. 
+
+3.) Token and Lexeme:
+
+    Token -> It forms a class of lexems it tells what category of lexemes it is , is it a 
+    keyword or an identifier or an integer etc.
+
+    Lexeme -> It is a string of characters when given an inout stream diving them into 
+    individual characters.
+
+    if(t==0){
+        return 0;
+    }
+
+    Token                       Lexeme
+    Keyword                     if
+    Identifier                  t
+    Comparison operator         ==
+    Keyword                     return
+    Parantheses                 {
+    Parantheses                 }
+
+4.) It translates lexemes into tokens both the token and lexeme need to be specified.
+5.) Lexical Ananlyzer recognizes the token that matches the longest lexeme >>, a shift token is recognized rather than two greater-than tokens. 
+6.) One thing affecting the structure of a compiler is the token set.
+7.) Either you can have tokens for every symbol or you an merge tokens
+8.) For example, the >, >=, >>, and >>=, can be treated either as four tokens, or as a single comparison-operator token
+ 
+    Having a token dor every symbol can make code generation easier but the parser can
+    become larger than necessary.
+    In general, arithmetic operators with the same precedence and associativity can be grouped together, type-declaration keywords (like 
+    int and char) can be combined, and so forth
+
+9.) The lexical analyzer is typically a self-contained unit that interfaces with the rest of 
+    the compiler via a small number (typically one or two) of subroutines and global variables. The parser calls the lexical-analyzer every time it needs a new token, and the 
+    analyzer returns that token and the associated lexeme. Since the actual input mechanism 
+    is hidden from the parser, you can modify or replace the lexical analyzer without 
+    affecting the rest of the compiler.
+
