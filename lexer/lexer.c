@@ -55,3 +55,16 @@ lexer(){
 		}
 	}
 }
+
+//LookAhead 
+
+static int LookAhead = -1;
+int match(int token){
+	if(LookAhead==-1){
+		LookAhead = lex();
+	}
+	return token == LookAhead;
+}
+void advance(){
+	LookAhead = lex();
+}
