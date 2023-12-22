@@ -9,8 +9,8 @@
 #define DIVISON               6                          /*     /        */
 #define LeftParantheses       7                          /*     (        */
 #define RightParantheses      8                          /*     )        */
-#define NUMBER                9                          /*    NUMBERS   */
-#define IDENTIFIERS           10                         /*   IDENTIFIERS */
+#define NUM_ID                9                          /*    NUMBERS OR IDENTIFIERS   */
+
 
 extern char* lexeme;   /* A character pointer that holds the current lexeme (token) identified by the lexer. */
 extern int lexlen;     /* An integer representing the length of the current lexeme, ensuring the parser knows how many characters to
