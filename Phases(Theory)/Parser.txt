@@ -5,3 +5,18 @@
     parse tree, and a parse tree is a structural representation of the sentence being parsed
 2.) Some compilers create a physical parse tree, made up of structures, pointers, and so forth, but most represent the
     
+3.)Parser generates no code it just parses the input 
+4.)Each subroutine corresponds to the left-hand side in the original grammar that bears the same name. Similarly, the structure
+   of each subroutine exactly matches the grammar 
+
+5.)The production - 
+
+   expression ~ term expression
+
+   is written in code as :
+   expression(){
+    term();
+    prime_expr();
+   }
+
+6.) Each subroutine is responsible for advancing past any tokens that are on the equivalent production's right-hand side.

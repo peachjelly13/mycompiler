@@ -15,7 +15,7 @@
 extern char* lexeme;   /* A character pointer that holds the current lexeme (token) identified by the lexer. */
 extern int lexlen;     /* An integer representing the length of the current lexeme, ensuring the parser knows how many characters to
 			 process */
-extern int lexline;    /* An integer tracking the current line number in the input being analyzed helpful for error reporting and
+extern int lexlineno;    /* An integer tracking the current line number in the input being analyzed helpful for error reporting and
 		          Code analysis */
 
 /*These three lines are important for forming a link between the parser and the lexer*/

@@ -3,7 +3,7 @@
 #include<ctype.h>
 char* lexeme = "";
 int lexlen = 0;
-int lexline = 0;
+int lexlineno = 0;
 
 lexer(){
 	static char input_buffer[128]; //Static datatype will also be reserved once the function returns a value
@@ -16,7 +16,7 @@ lexer(){
 				*current = '\0';
 				return EOI;
 			}
-			lexline++;
+			lexlineno++;
 			while(isspace(*current))
 				++current;
 		}
@@ -58,13 +58,31 @@ lexer(){
 
 //LookAhead 
 
+
+//parser must look at the next input token without actually reading it
+
+//the match function matches the next input 
+//match (token) evaluates to true if the next token in the input stream 
+//matches its argument-it "looks ahead" at the next input symbol without reading it.
+
+//The lookahead variable is used to hold the lookahead token
+//It is initialized to -1 that is currently it doesnt hold a token
+
 static int LookAhead = -1;
+
+//when the match function is called it will hold the token 
+//match () simply returns true if Lookahead matches its argument.
+
+
 int match(int token){
 	if(LookAhead==-1){
-		LookAhead = lex();
+		LookAhead = lexer();
 	}
 	return token == LookAhead;
 }
+//advance () discards the current token and advances to the next one
+//The advance ( ) function just calls lex() to assign a new value / token to the lookahead
 void advance(){
-	LookAhead = lex();
+	LookAhead = lexer();
 }
+
